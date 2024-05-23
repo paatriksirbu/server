@@ -1,6 +1,7 @@
 'use strict'
-
 import { Router } from 'express'
+import ProfesorController from '/home/patrik/Documentos/VSC/serverExamen/codemasters-server/src/controllers/ProfesorController.js'
+
 let router = Router()
 
 // Obtenemos todos los profesores
