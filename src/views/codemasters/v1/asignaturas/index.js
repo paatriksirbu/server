@@ -4,20 +4,19 @@ import { Router } from 'express'
 let router = Router()
 
 
-// Obtenemos todos las asignaturas
+// Obtenemos todas las asignaturas
+router.get('/', AsignaturaController.getAllAsignaturas)
 
-router.get('/', AlumnoController.getAllAlumnos)
+// Seleccionamos una asignatura por su id
+router.get('/:id', AsignaturaController.getAsignaturaById)
 
-// Seleccionamos a un alumno por su id
-router.get('/:id', AlumnoController.getAlumnoById)
+// Creamos una nueva asignatura
+router.post('/', AsignaturaController.createAsignatura)
 
-// Creamos un nuevo alumno
-router.post('/', AlumnoController.createAlumno)
+// Actualizamos una asignatura
+router.put('/:id', AsignaturaController.updateAsignatura)
 
-// Actualizamos un alumno
-router.put('/:id', AlumnoController.updateAlumno)
-
-// Eliminamos un alumno
-router.delete('/:id', AlumnoController.deleteAlumno)
+// Eliminamos una asignatura
+router.delete('/:id', AsignaturaController.deleteAsignatura)
 
 export default router
