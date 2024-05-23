@@ -3,25 +3,25 @@
 import { getAlumnos, addAlumno, getProfesores, addProfesor, getAsignaturas, addAsignatura } from './data.js'
 
 function getAlumnoById(idAlumno) {
-    // TODO
+    return data.asignaturas.find(alumno => alumno.id === idAlumno)
 }
 
 function getProfesorById(idProfesor) {
-    // TODO
+    return data.profesores.find(profesor => profesor.id === idProfesor)
 }
 
 function getAsignaturaById(idAsignatura) {
-    // TODO
+    return data.asignaturas.find(asignatura => asignatura.id === idAsignatura)
 }
 
 // Asignaturas que imparte un profesor
 function getAsignaturasByProfesorId(idProfesor) {
-    // TODO
+    return data.asignaturas.filter(asignatura => asignatura.profesor === idProfesor)
 }
 
 // Asignaturas en las que está matriculado un alumno
 function getAsignaturasByAlumnoId(idAlumno) {
-    // TODO
+    return data.asignaturas.filter(asignatura => asignatura.alumnos.includes(idAlumno))
 }
 
 export default {
