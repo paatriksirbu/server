@@ -1,13 +1,14 @@
 'use strict'
 
 import data from './data.json' assert { type: 'json' }
+import data from './data.json' assert { type: 'json' }
 
 export function getAlumnos() {
     return data.alumnos
 }
 
 export function addAlumno(alumno) {
-    // TODO
+    data.alumnos.push(alumno)
 }
 
 export function getProfesores() {
@@ -15,7 +16,7 @@ export function getProfesores() {
 }
 
 export function addProfesor(profesor) {
-    // TODO
+    data.profesores.push(profesor)
 }
 
 export function getAsignaturas() {
@@ -23,5 +24,5 @@ export function getAsignaturas() {
 }
 
 export function addAsignatura(asignatura) {
-    // TODO
+    data.asignaturas.push(asignatura)
 }
